@@ -1,7 +1,12 @@
+/* main style */
+
 body {
     background-color: antiquewhite;
 }
 
+/* end main style */
+
+/* choveche style */
 .head {
     width: 100px;
     height: 100px;
@@ -67,4 +72,29 @@ body {
     top: 360px;
     transform: rotate(45deg);
     border-radius: 10px;
+}
+
+/* end of choveche */
+
+/* listing */
+
+.cool-button-list {
+    list-style-type: none;
+}
+
+.cool-button-list .cool-button {
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 3px 3px 3px rgba(0,0,0,0.32);
+    -moz-box-shadow: 4px 3px 3px 3px rgba(0,0,0,0.32);
+    box-shadow: 4px 3px 3px 3px rgba(0,0,0,0.32);
+}
+
+.cool-button-list .cool-button.on {
+    background-color: limegreen;
+}
+
+.cool-button-list .cool-button.off {
+    background-color: red;
 }
