@@ -8,13 +8,16 @@ for(var i = 0; i < coolButtonsCount; i++) {
 
     coolButtons[i].addEventListener('click', function () {
         var currentButtonClass = this.getAttribute('class');
-        console.log(currentButtonClass);
         var currentButtonClassState = currentButtonClass.replace("cool-button ", "");
-        console.log(currentButtonClassState);
-        if (currentButtonClassState == "on") {
+        var responseFor = this.getAttribute("data-response-for");
+        var element = document.getElementsByClassName(responseFor)[0];
+
+        if (currentButtonClassState === "on") {
             this.setAttribute("class", "cool-button off");
+            element.setAttribute("class", responseFor);
         } else {
             this.setAttribute("class", "cool-button on");
+            element.setAttribute("class", responseFor + " move");
         }
     });
 }
